@@ -93,7 +93,10 @@ export interface PiniaPluginContext<
  * Plugin to extend every store
  */
 export interface PiniaStorePlugin {
-  (context: PiniaPluginContext): Partial<PiniaCustomProperties>
+  (context: PiniaPluginContext):
+    | Partial<PiniaCustomProperties>
+    | void
+    | undefined
 }
 
 /**
